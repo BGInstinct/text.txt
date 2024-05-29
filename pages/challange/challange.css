@@ -1,0 +1,15 @@
+.chall-button {
+  margin: 30px 0;
+}
+
+@media (max-width: 500px) {
+  .chall-button {
+  width: 100%;
+  }
+}
+
+@media (min-width: 500px) {
+  .top-img {
+    float: right !important;
+  }
+}

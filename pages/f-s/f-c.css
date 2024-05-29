@@ -1,0 +1,5 @@
+@media (min-width: 500px) {
+  .top-img {
+    float: right !important;
+  }
+}

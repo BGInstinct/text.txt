@@ -1,0 +1,27 @@
+.tabel-content {
+  width: 90%;
+  margin: 0 5%;
+  display: grid;
+  grid-template-columns: 30fr 10fr 60fr;
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.tabel-metod {
+  color: #adc6ff;
+  text-align: center;
+}
+
+.tabel-matod-exp {
+  text-align: center;
+}
+
+.tabel-line {
+  width: 3px;
+  height: 80%;
+}
+
+@media (min-width: 500px) {
+  .top-img {
+    float: right !important;
+  }
+}

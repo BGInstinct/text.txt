@@ -1,0 +1,315 @@
+body {
+  margin: 0px;
+  font-family: "JetBrains Mono", monospace;
+  background-color: #191919;
+  color: #fafafa;
+  font-size: 1.3rem;
+}
+
+a {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.3rem;
+  color: #fafafa;
+  margin: 5% 10%;
+}
+
+/** code format **/
+
+.code {
+  margin: 5% 5% 0 5%;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.code-lang {
+  color: #595959;
+  margin: 10px 10px 0px 10px;
+  font-size: 1.4rem;
+}
+
+.code-format {
+  background-color: #111111;
+  margin: 0;
+  padding: 20px;
+  border: #000000;
+  border-radius: 0px 0px 10px 10px;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+}
+
+/** heading **/
+
+.top {
+  width: 100%;
+  position: relative;
+}
+
+.top-img {
+  width: 80%;
+}
+
+.active, .burger-menu:hover {
+  background-color: #262626;
+}
+
+.burger-menu {
+  z-index: 2;
+  background-color: #282828;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border: 0px;
+  position: absolute;
+  width: 20%;
+  height: 1;
+}
+
+.menu-but-icon {
+  position: relative;
+  width: 100%;
+}
+
+.menu {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  display: none;
+  background-color: #1f1f1f;
+  z-index: 1;
+}
+
+.menu-op {
+  margin-top: 4%;
+  margin-bottom: 3%;
+  color: #f1f1f1;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu-op:hover {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.line {
+  margin: 0 10%;
+  width: 80%;
+  height: 3px;
+  background-color: #fafafa;
+}
+
+.top-nav-file-explorer {
+  background-color: #000000;
+  color: #595959;
+  margin: 0;
+  position: relative;
+  bottom: 8px;
+  font-size: 1rem;
+  padding: 0.5% 5%;
+}
+
+.top-nav-file-explorer-a {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 500px) {
+  .top-img {
+    width: auto;
+    max-height: 5rem;
+    float: left !important;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .menu {
+    display: inline;
+    position: relative;
+    height: inherit;
+    float:none !important;
+  }
+
+  .menu-pc {
+    display: inline;
+    margin: 0;
+    padding: 1.25% 2.92%;
+    float: left;
+    background-color: #262626;
+  }
+
+  .line-menu-pc {
+    width: 3px;
+    display: inline;
+    height: 10px;
+    margin: 0;
+  }
+
+  .top-nav-file-explorer {
+    display: none;
+  }
+}
+
+/** main body **/
+
+.left-main-text {
+  width: 50%;
+  float: left;
+
+  /* text */
+  color: #fafafa;
+}
+
+.right-main-side {
+  width: 50%;
+  float: right;
+}
+
+@media (max-width: 500px) {
+  .left-main-text {
+    width: 100%;
+  }
+
+  .right-main-side {
+    display: none;
+  }
+}
+
+.main-text-body {
+  text-align: left;
+  line-height: 2.5rem;
+  color: #fafafa;
+}
+
+.button-main-body {
+  padding: 0.8rem 2.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  margin-left: 10%;
+}
+
+.text-file {
+  width: 100%;
+}
+
+.files-img {
+  float: right;
+  scale: 60%;
+  position: relative;
+  top: 60px;
+  left:30px;
+  
+}
+
+.line-main {
+  clear: right;
+  margin: 0 10%;
+  width: 80%;
+  height: 3px;
+  background-color: #fafafa;
+}
+
+@media (min-width: 500px) {
+  .files-img {
+    margin-right: 200px;
+    position: relative;
+    top: 160px;
+  }
+
+  .line-main {
+    margin-bottom: 100px;
+    position: relative;
+    top: 100px;
+  }
+}
+
+.bracets-for-the-text {
+  margin: 5% 5% 0 5%;
+}
+
+.white-bracet {
+  background-color: #fafafa;
+  height: 60px;
+  width: 60px;
+}
+
+.black-mask {
+  background-color: #191919;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  bottom: 40px;
+  left: 20px;
+}
+
+.reversed {
+  rotate: 180deg;
+  margin-bottom: 5%;
+  margin-top: 0;
+  padding: 0;
+}
+
+.second-par {
+  position: relative;
+  margin: 10%;
+}
+
+.poosition {
+  position: relative;
+  margin: 20px 0 40px 0;
+  left: 2.5rem;
+}
+
+.rem-margin {
+  margin: 0 10% 0 10%;
+}
+
+@media (min-width: 500px) {
+  .top-main-text-body{
+    margin: 0px;
+  }
+  .main-text-body{
+    margin: 35px 250px;
+  }
+}
+
+/** bottom nav bar **/
+
+@media (max-width: 500px) {
+  .bottom-nav-menu {
+    background-color: #000000;
+    height: 34rem;
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .line-bottom-phone {
+    clear: right;
+    margin: 0 10%;
+    width: 80%;
+    height: 3px;
+    background-color: #595959;
+  }
+
+  .right-menu-side-bottom, .bottom-right-menu-items, .left-menu-side-bottom, .bottom-left-menu-items {
+    width: 100%;
+    color: #595959;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-align: center;
+    float: none;
+    margin: 5% 0;
+  }
+
+  .left-menu-side-bottom {
+    padding: 1% 0;
+    margin: 0;
+  }
+}

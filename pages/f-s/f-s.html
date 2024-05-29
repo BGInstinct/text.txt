@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../stile.css">
+  <link rel="stylesheet" href="f-c.css">
+  <title>text.txt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top" id="top">
+    <img class="top-img" src="../../photos\heading-v1.0.png">
+    <button class="burger-menu">
+      <img class="menu-but-icon" src="../../photos/menu icon.png">
+    </button>
+  <div class="menu">
+    <p class="menu-op menu-pc"><a class="menu-op" href="../../index.html">home</a></p>
+    <div class="line line-menu-pc"></div>
+    <p class="menu-op menu-pc"><a class="menu-op" href="../../pages/f-b/f-b.html">file basics</a></p>
+    <p class="menu-op menu-pc"><a class="menu-op" href="../../pages/challange/challange.html">challenge</a></p>
+    <p class="menu-op menu-pc"><a class="menu-op" href="../../pages/f-s/f-s.html">file security</a></p>
+    <p class="menu-op menu-pc"><a class="menu-op" href="../../pages/faq/faq.html">faq</a></p>
+    <p class="menu-op menu-pc"><a class="menu-op" href="#">kahut</a></p>
+    <p class="menu-op menu-pc"><a class="menu-op" href="#">contact us</a></p>
+  </div>
+</div>
+  <div class="main">
+    <p class="top-nav-file-explorer"><a class="top-nav-file-explorer-a">>>>main/home/file_security</a></p>
+    <p>
+      Ensuring the security of your files is crucial to protect sensitive information from unauthorized access. Below, you will find example code for a simple encryption program written in both Python and C#. Additionally, there is a more complex example available to demonstrate advanced encryption techniques for robust file security.
+    </p>
+    <div class="code">
+      <div class="code-lang">Pyton</div>
+      <p class="code-format">import random
+import string
+
+chars = string.punctuation + string.digits + string.ascii_letters
+
+chars = list(chars)
+key = chars.copy()
+
+random.shuffle(key)
+
+#ENCRYPT
+plain_text = input("Enter a message to encrypt: ")
+cipher_text = ""
+
+for letter in plain_text:
+    index = chars.index(letter)
+    cipher_text += key[index]
+
+print(f"original message : {plain_text}")
+print(f"encrypted message: {cipher_text}")
+
+#DECRYPT
+cipher_text = input("Enter a message to encrypt: ")
+plain_text = ""
+
+for letter in cipher_text:
+    index = key.index(letter)
+    plain_text += chars[index]
+
+print(f"encrypted message: {cipher_text}")
+print(f"original message : {plain_text}")</p>
+    </div>
+    <div class="code">
+      <div class="code-lang">C#</div>
+      <p class="code-format">#NOTE: REMOVE THE SLASH FROM <\char>
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // Initialize character sets
+        string chars = " " + "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" + "0123456789" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz";
+        List<\char> charList = chars.ToList();
+        List<\char> key = new List<\char>(charList);
+
+        // Shuffle key
+        Random rng = new Random();
+        int n = key.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            char value = key[k];
+            key[k] = key[n];
+            key[n] = value;
+        }
+        foreach (char c in key)
+        {
+            Console.WriteLine(c);
+        }
+        foreach (char a in charList)
+        {
+            Console.WriteLine(a);
+        }
+
+        // ENCRYPT
+        Console.Write("Enter a message to encrypt: ");
+        string plainText = Console.ReadLine();
+        string cipherText = "";
+
+        foreach (char letter in plainText)
+        {
+            int index = charList.IndexOf(letter);
+            cipherText += key[index];
+        }
+
+        Console.WriteLine($"Original message: {plainText}");
+        Console.WriteLine($"Encrypted message: {cipherText}");
+
+        // DECRYPT
+        Console.Write("Enter a message to decrypt: ");
+        cipherText = Console.ReadLine();
+        plainText = "";
+
+        foreach (char letter in cipherText)
+        {
+            int index = key.IndexOf(letter);
+            plainText += charList[index];
+        }
+
+        Console.WriteLine($"Encrypted message: {cipherText}");
+        Console.WriteLine($"Original message: {plainText}");
+    }
+}</p>
+    </div>
+    <p>Sorry for the inconvenience.</p>
+    <p>Coming soon.</p>
+  </div>
+  <div class="bottom-nav-menu">
+    <div class="left-menu-side-bottom">
+      <p class="bottom-left-menu-items bottom-spase-phone"><a class="left-menu-side-bottom" href="#">youtube</a></p>
+      <p class="bottom-left-menu-items"><a class="left-menu-side-bottom" href="#">twich</a></p>
+      <p class="bottom-left-menu-items"><a class="left-menu-side-bottom" href="#">instagram</a></p>
+      <p class="bottom-left-menu-items"><a class="left-menu-side-bottom" href="#">github</a></p>
+    </div>
+    <div class="line-bottom-phone"></div>
+    <div class="right-menu-side-bottom">
+      <p class="bottom-right-menu-items"><a class="right-menu-side-bottom" href="../../index.html">home</a></p>
+      <p class="bottom-right-menu-items"><a class="right-menu-side-bottom" href="../f-b/f-b.html">file basics</a></p>
+      <p class="bottom-right-menu-items"><a class="right-menu-side-bottom" href="../challange/challange.html">challenge</a></p>
+      <p class="bottom-right-menu-items"><a class="right-menu-side-bottom" href="f-s.html">file security</a></p>
+      <p class="bottom-right-menu-items"><a class="right-menu-side-bottom" href="../faq/faq.html">faq</a></p>
+      <p class="bottom-right-menu-items"><a class="right-menu-side-bottom" href="#">kahut</a></p>
+    </div>
+    
+
+  </div>
+  <script src="../../javascript.js"></script>
+</body>
+</html>

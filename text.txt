@@ -1,0 +1,286 @@
+top nav bar:
+- home
+- file basics
+- challenge
+- file security
+- faq
+- kahut
+
+font: https://fonts.google.com/specimen/JetBrains+Mono?preview.text=text.txt%C2%A0%0AТест%20АаБбСс&subset=cyrillic&noto.script=Cyrl
+
+maine page:
+File handling in programming involves tasks such as reading, writing, creating, opening, and closing files on a computer system. It's essential for working with data stored in files across different programming languages.
+
+-----------------------------------------------------
+
+exercise:
+1. Create file
+  - Code a program that creates a file that is named ass the user wants.
+  a) Enter:
+    - name(str) = name of the file.
+  b) Exit:
+    - noting.
+    ! Creates a file cold {name}.
+
+2. School Administration
+  - Code a program that reads all the student names and writes them in the console.
+  a) Enter:
+    - noting.
+  b) Exit:
+    - Every student's name on new line.
+
+3. Users management
+  - Code a program that gets the user: name, password, phone - and saves it in a file called "user"
+  a) Enter:
+    - name(str) = name of the user.
+    - password(str) = password of the user.
+    - phone(str) = phone of the user.
+  b) Exit:
+    - noting.
+    ! Creates a file cold "user".
+
+4. Note app
+  - Code a program that can create and read notes.
+  a) Enter:
+    - w(str) or r(str) = "w" for writing a note, "r" for reading a note.
+    - name(str) = name of the note.
+    - if "w" note(str) = the content of the note.    
+  b) Exit:
+    - if "r" write the content of th note.
+  ! No to notes with the same name.
+
+5. Log in
+  - Code a program that will be placed on the back of a website. You can Log in or Sign up. When you Log in, the program compares your username with the files. If there is a file called that, it opens it and compares the password. If matched, you can log in; if not, you are back at the start. If you choose Sign up, the program prompts you to give your username and password and adds it to the folder with the users. Note that usernames can't match.
+  a) Enter:
+    - l(str) or s(str) = "l" for Log in, "s" for Sing up.
+    - username(str) = username.
+    - password(str) = password. 
+  b) Exit:
+    - if successful wtite "Hello, {username}".
+
+6. Ticket sistem
+  - A compani asced you to make them a program for the tiket bute. The ladi wants to: Make a tiket, Check the tiket is it valid and Delieat a tiket.
+  a) Enter:
+    - create(str), check(str) or delieat(str)
+    Create:
+      - Film(str) = tital of the film
+      - Name(str) = name of the baier
+      - id(int) = computer gives a random number(id). ! Unick.
+    Check:
+      - film(str) = name of the film.
+      - id(int) =  number of the tiket
+    Delieat:
+      - film(str) = name of the film.
+      - id(int) =  number of the tiket.
+  b) Exit:
+    Create:
+      - "Tiket sold"
+    Check:
+      - "Tiket valid"
+      - "Tiket invalid"
+    Delieat:
+      - "Tiket dealeted"
+      - "Tiket not found"
+      
+-----------------------------------------------------
+file basics:
+File handling is a fundamental aspect of programming, allowing you to read from and write to files on your computer's storage. Whether you're working with text files, binary files, or other file formats, understanding file handling is essential for many applications.
+1. Opening and Closing Files:
+
+Before you can read from or write to a file, you need to open it. In most programming languages, you use a function to open a file, specifying the file name and the mode (read, write, append, etc.). Always remember to close the file when you're done to free up system resources.
+
+Example (Python):
+
+python
+
+file = open("example.txt", "r")  # Open file in read mode
+# Do something with the file
+file.close()  # Close the file
+
+2. Reading from Files:
+
+Once a file is opened, you can read its contents. There are various methods for reading from files depending on your programming language and the type of data in the file. Common methods include reading line by line or reading the entire file at once.
+
+Example (Python - Read Lines):
+
+python
+
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line)
+
+3. Writing to Files:
+
+To write data to a file, you open it in write mode (or append mode if you want to add to an existing file) and then use methods to write data to it. Be cautious when writing to files, as you can accidentally overwrite existing data.
+
+Example (Python - Write):
+
+python
+
+with open("example.txt", "w") as file:
+    file.write("Hello, World!\n")
+
+4. Error Handling:
+
+File operations can fail due to various reasons such as the file not existing, insufficient permissions, or disk full errors. Always include error handling in your file handling code to handle such situations gracefully.
+
+Example (Python - Error Handling):
+
+python
+
+try:
+    file = open("example.txt", "r")
+    # Do something with the file
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    file.close()
+
+5. File Navigation:
+
+Some programming languages provide functions to navigate within files, such as moving the cursor to a specific position or reading from a particular byte offset. These operations can be useful when dealing with large files or complex data structures.
+6. File Formats:
+
+Different file formats require different handling techniques. Text files are typically read and written line by line, while binary files may require special methods for reading and writing structured data.
+7. Resource Management:
+
+Always remember to close files after you're done with them to prevent resource leaks. Many programming languages provide constructs like with statements or try-finally blocks to ensure proper resource management.
+Conclusion:
+
+Mastering file handling is crucial for any programmer, as it enables interaction with external data sources such as text files, databases, and more. Practice different file handling operations to become proficient in working with files effectively.
+
+-----------------------------------------------------
+
+simple exampels:
+C#
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        string text = "Hello, this is a simple example.";
+        // Write to a file
+        File.WriteAllText("example.txt", text);
+
+        // Read from the file
+        string content = File.ReadAllText("example.txt");
+        Console.WriteLine(content);
+    }
+}
+- - - - - - - - - - - - - - - - - - -
+pyton
+# Write to a file
+with open("example.txt", "w") as file:
+    file.write("Hello, this is a simple example.")
+
+# Read from the file
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+- - - - - - - - - - - - - - - - - - -
+js
+const fs = require('fs');
+
+// Write to a file
+fs.writeFileSync('example.txt', 'Hello, this is a simple example.');
+
+// Read from the file
+const content = fs.readFileSync('example.txt', 'utf8');
+console.log('File content:');
+console.log(content);
+
+
+evriday use:
+File handling is a fundamental aspect of programming that finds everyday use in various scenarios. For instance, consider a simple note-taking application. When you create a new note and save it, the application utilizes file handling to store your note's content in a file on your device. Later, when you open the application to view your notes, it reads the contents of these files using file handling techniques and displays them on your screen.
+
+Similarly, many applications rely on file handling for data persistence. When you update your profile information on a social media platform, such as changing your profile picture or updating your bio, the application uses file handling to save these changes to files on the server. The next time you or someone else views your profile, the application retrieves this information from the files and displays it.
+
+File handling also plays a crucial role in data analysis tasks. Suppose you are working on a project that involves analyzing sales data. You might download a CSV file containing the sales records, import it into your analysis software, and use file handling techniques to read and manipulate the data. You can then perform various operations, such as calculating total sales, generating reports, or visualizing trends, all made possible by file handling capabilities.
+
+Moreover, file handling is essential for software installations and updates. When you download and install a new program on your computer, the installer uses file handling to create directories, copy files to specific locations, and configure settings. Similarly, when an application receives an update, the update process often involves file handling to replace old files with new ones, ensuring the software stays up-to-date.
+
+In essence, whether you're saving a document, updating an online profile, analyzing data, installing software, or countless other everyday tasks, file handling quietly facilitates these operations, making them seamless and efficient. It's a behind-the-scenes hero of modern computing, enabling the storage, retrieval, and manipulation of data across a wide range of applications and scenarios.
+
+
+complex example:
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.IO; // include the System.IO namespace for File class
+
+class Program
+{
+    public static Dictionary<string, string> ImportingData(string filePath)
+    {
+        return File
+          .ReadAllLines(filePath)
+          .Select(x => x.Split('-'))
+          .Where(x => x.Length > 1)
+          .ToDictionary(x => x[0].Trim(), x => x[1]);
+    }
+
+    public static bool logInSuccessfully()
+    {
+        Console.WriteLine("Enter your username: ");
+        string username = Console.ReadLine();
+        Console.WriteLine("Enter your password: ");
+        string password = Console.ReadLine();
+
+        try
+        {
+            string filePath = $"users/{username}.txt";
+
+            if (File.Exists(filePath))
+            {
+                var data = ImportingData(filePath);
+                if (data["password"] == password)
+                    return true;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+        return false;
+    }
+
+    public static bool singInSuccessfully()
+    {
+        Console.WriteLine("Enter your username: ");
+        string username = Console.ReadLine();
+        Console.WriteLine("Enter your password: ");
+        string password = Console.ReadLine();
+        string filePath = $"users/{username}.txt";
+        if (File.Exists(filePath))
+        {
+            Console.WriteLine("File exists.");
+            return false;
+        }
+        File.WriteAllText(filePath, $"username-{username}\npassword-{password}");
+        return true;
+    }
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Program Started");
+        Console.Write("Log In or Sing In (l/s): ");
+        var logIn = Console.ReadLine();
+        if (logIn == "l")
+        {
+            if (logInSuccessfully())
+            {
+                Console.WriteLine("Log In Successful");
+            }
+        }
+
+        else if (logIn == "s")
+        {
+            if (singInSuccessfully())
+            {
+                Console.WriteLine("Sing In Successful");
+            }
+        }
+    }
+}
