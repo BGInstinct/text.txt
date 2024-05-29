@@ -14,11 +14,11 @@ for (i = 0; i < coll.length; i++) {
 }
 
 function chall_pdf() {
-  window.location.href = "";
+  window.location.href = "../../File Handling Exercises.pdf";
 }
 
 function chall_repo() {
-  window.location.href = "https://github.com";
+  window.location.href = "https://github.com/BGInstinct/file_handling_exercises";
 }
 
 function main_fb() {
